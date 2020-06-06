@@ -41,7 +41,7 @@ Copy all the files into the "models" directory.
   --dataset upb
 ```
 
-## Train the model
+## Train model
 
 ``` shell
 python3 train.py \
@@ -54,7 +54,7 @@ python3 train.py \
  --model default
 ```
 
-## Test the model
+## Test model
 
 ```shell
 python3 test.py \
