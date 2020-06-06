@@ -1,5 +1,9 @@
 # Unsupervised-Optical-Flow
 
+<p align="center">
+  <img src="teaser/fc0768f4d5a34d12.gif" alt="example input output gif" width="1024" />
+</p>
+
 ## Pre-requisite for rigid flow
 
 We used the training pipeline from <a href="https://github.com/nianticlabs/monodepth2"> monodepth2 </a>
@@ -37,14 +41,24 @@ Copy all the files into the "models" directory.
   --dataset upb
 ```
 
-Train the model:
+## Train the model
 
 ``` shell
 python3 train.py \
-	--dataset upb \
-	--batch_size 12 \
-	--num_epochs 20 \
-	--scheduler_step_size 15 \
-	--height 256 \
-	--width 512 \
+ --dataset upb \
+ --batch_size 12 \
+ --num_epochs 20 \
+ --scheduler_step_size 15 \
+ --height 256 \
+ --width 512 \
+ --model default
+```
+
+## Test the model
+
+```shell
+python3 test.py \
+ --video_path raw_dataset/fc0768f4d5a34d12.mov \
+ --save_gif teaser/fc0768f4d5a34d12.gif \
+ --model_name default
 ```
