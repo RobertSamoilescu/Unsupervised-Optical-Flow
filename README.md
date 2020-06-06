@@ -7,9 +7,7 @@ Using the pose estimator module, we can compute the displacement at a pixel leve
 ```shell
 mkdir models
 ```
-A pretrained model for the UPB dataset is available <a href="https://drive.google.com/drive/folders/18kTR4PaRlQIeEFJ2gNkiXYnFcTfyrRNH?usp=sharing"> here </a>:
-
- 
+A pretrained model for the UPB dataset is available <a href="https://drive.google.com/drive/folders/18kTR4PaRlQIeEFJ2gNkiXYnFcTfyrRNH?usp=sharing"> here </a>. 
 Copy all the files into the "models" directory.
  
  
