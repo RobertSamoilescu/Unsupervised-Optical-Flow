@@ -58,7 +58,16 @@ python3 train.py \
  --model default
 ```
 
+## Pre-trained model
+```shell
+mkdir -p snapshots/checkpoints/
+```
+Download pretrained model from <a href="">here</a> into the "snapshots/checkpoints" directory
+
+
 ## Test model
+
+The checkpoint should be present in "snaphsots/checkpoints" directory
 
 ```shell
 python3 test.py \
