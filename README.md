@@ -37,7 +37,7 @@ Copy all the files into the "models" directory.
  python3 scripts/create_dataset.py \
   --src_dir raw_dataset\
   --dst_dir dataset \
-  --split_dir scenes_split \
+  --split_dir split_scenes \
   --dataset upb
 ```
 
