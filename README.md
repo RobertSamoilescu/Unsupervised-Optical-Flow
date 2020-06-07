@@ -73,5 +73,5 @@ The checkpoint should be present in "snaphsots/checkpoints" directory
 python3 test.py \
  --video_path raw_dataset/fc0768f4d5a34d12.mov \
  --save_gif teaser/fc0768f4d5a34d12.gif \
- --model_name default
+ --model_name default.pth
 ```
