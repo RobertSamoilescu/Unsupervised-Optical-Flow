@@ -124,9 +124,7 @@ def pipeline(prev_frame: np.array, frame: np.array):
     flow = dflow + rflow
     flow = flow.squeeze(0).cpu().numpy().transpose(1, 2, 0)
     color_flow = flow_to_color(flow)
-    rflow = rflow.squeeze(0).cpu().numpy().transpose(1, 2, 0)
-    color_rflow = flow_to_color(rflow)
-    return np.concatenate([color_flow, color_rflow], axis=1)[..., ::-1]
+    return color_flow[...,::-1]
 
 def test_video():
     all_frames = []
@@ -145,14 +143,13 @@ def test_video():
         prev_frame = frame
 
         frame = cv2.resize(frame, (512, 256))
-        flow = cv2.resize(flow, (1024, 256))
-        frame_flow = np.concatenate([frame, flow], axis=1)
+        flow = cv2.resize(flow, (512, 256))
+        frame_flow = np.concatenate([frame, flow], axis=0)
 
         # Display the resulting frame
         all_frames.append(frame_flow)
         cv2.imshow('frame', frame_flow)
-        if cv2.waitKey(0) & 0xFF == ord('q'):
-           break
+        cv2.waitKey(100)
 
     # save gif
     all_frames = [pil.fromarray(frame[...,::-1]) for frame in all_frames]
@@ -160,7 +157,7 @@ def test_video():
         args.save_gif, 
         save_all=True, 
         append_images=all_frames[1:],
-        duration=175
+        duration=150
     )
 
     # When everything done, release the capture
