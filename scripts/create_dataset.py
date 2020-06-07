@@ -70,7 +70,7 @@ def read_video(file: str, src_folder: str, dst_folder: str, verbose: bool = Fals
     cv2.destroyAllWindows()
 
 videos = os.listdir(args.src_dir)
-videos = [v for v in videos if v.endswith('.mov')][:2]
+videos = [v for v in videos if v.endswith('.mov')]
 for v in tqdm(videos):
     read_video(v, args.src_dir, args.dst_dir, False)
 
