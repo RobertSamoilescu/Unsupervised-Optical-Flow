@@ -1,11 +1,7 @@
 # Unsupervised-Optical-Flow
 
 <p align="center">
-  <img src="teaser/ff866ac94d8441bf_rgb.gif" alt="example input gif" width="512" />
-</p>
-
-<p align="center">
-  <img src="teaser/ff866ac94d8441bf_flow.gif" alt="example output gif" width="512" />
+  <img src="teaser/fc0768f4d5a34d12.gif" alt="example input-output gif" width="512" />
 </p>
 
 ## Pre-requisite for rigid flow
